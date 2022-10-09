@@ -1,21 +1,19 @@
 export class Persona {
-    protected nombre : string;
-    protected edad : number;
+    protected nombre: string;
+    protected edad: number;
     protected telefono: string;
 
-
-    constructor(pNombre:string ,pEdad :number){
+    constructor(pNombre: string, pEdad: number) {
         this.nombre = pNombre;
         this.edad = pEdad;
         this.telefono = "";
-
     }
 
     public getNombre(): string {
         return this.nombre;
     }
 
-    public setNombre(pNombre:string):void{
+    public setNombre(pNombre: string): void {
         this.nombre = pNombre;
     }
 
@@ -23,7 +21,7 @@ export class Persona {
         return this.edad;
     }
 
-    public setEdad(pEdad:number):void{
+    public setEdad(pEdad: number): void {
         this.edad = pEdad;
     }
 
@@ -31,9 +29,7 @@ export class Persona {
         return this.telefono;
     }
 
-    public setTelefono(pTelefono:string):void{
+    public setTelefono(pTelefono: string): void {
         this.nombre = pTelefono;
     }
-
-
 }

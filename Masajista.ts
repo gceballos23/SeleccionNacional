@@ -1,13 +1,12 @@
-import {Persona} from "./Persona";
+import { Persona } from "./Persona";
 
-export class Masajista extends Persona{
-    protected contratado : boolean;
-    protected ocupado : boolean;
-  
-    constructor(pNombre : string, pEdad : number){
-        super(pNombre,pEdad);
+export class Masajista extends Persona {
+    protected contratado: boolean;
+    protected ocupado: boolean;
+
+    constructor(pNombre: string, pEdad: number) {
+        super(pNombre, pEdad);
         this.ocupado = false;
- 
     }
 
     public getContratado(): boolean {
@@ -21,14 +20,12 @@ export class Masajista extends Persona{
     public despedir(): void {
         this.contratado = false;
     }
-    
-    public comenzarMasaje():void{
+
+    public comenzarMasaje(): void {
         this.ocupado = true;
-    
     }
 
-    public TerminarMasaje(): void{
-        this.ocupado =  false;
-
+    public TerminarMasaje(): void {
+        this.ocupado = false;
     }
 }

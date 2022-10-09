@@ -18,8 +18,8 @@ var SeleccionNacional = /** @class */ (function () {
         return this.jugadores;
     };
     SeleccionNacional.prototype.convocarJugador = function (pJugador) {
-        this.jugadores.push(pJugador);
         pJugador.setConvocado(true);
+        this.jugadores.push(pJugador);
         console.log("Se convoco  al siguiente Jugador " + pJugador.getNombre());
     };
     SeleccionNacional.prototype.desvincularJugador = function (pJugador) {
@@ -28,7 +28,7 @@ var SeleccionNacional = /** @class */ (function () {
             if (pJugador.getNombre() === this.jugadores[i].getNombre()) {
                 pJugador.setConvocado(false);
                 this.jugadores.splice(i, 1);
-                console.log("Se Despidio el siguiente Masajista " + pJugador.getNombre());
+                console.log("Se Despidio el siguiente Jugador " + pJugador.getNombre());
                 control = 1;
                 break;
             }
@@ -41,8 +41,8 @@ var SeleccionNacional = /** @class */ (function () {
         return this.masajistas;
     };
     SeleccionNacional.prototype.contratarMasajista = function (pMasajista) {
-        this.masajistas.push(pMasajista);
         pMasajista.contratar();
+        this.masajistas.push(pMasajista);
         console.log("Se contrato el siguiente Masajista " + pMasajista.getNombre());
     };
     SeleccionNacional.prototype.despedirMasajista = function (pMasajista) {
